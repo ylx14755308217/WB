@@ -1,0 +1,2 @@
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:Ylxlovehcy520@@@47.103.147.46:3306/weibo'
+SQLALCHEMY_TRACK_MODIFICATIONS = True
