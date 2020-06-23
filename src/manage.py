@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_script import Manager
 from flask_migrate import Migrate,MigrateCommand
+from flask import render_template
 from libs.db import db
 from libs import config
 from user.views import user_bp
@@ -19,6 +20,10 @@ manager = Manager(app)
 manager.add_command('db',MigrateCommand)
 
 app.register_blueprint(user_bp)
+
+@app.route('/')
+def home():
+    return render_template('base.html')
 
 if __name__ == '__main__':
     manager.run()
